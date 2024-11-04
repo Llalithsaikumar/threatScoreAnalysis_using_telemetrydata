@@ -67,9 +67,5 @@ if __name__ == "__main__":
     results = analyzer.analyze_telemetry('robotic_telemetry_data.csv')
     
     if results is not None:
-        """
-        print("\nTelemetry Analysis Results:")
-        print(results[['RiskScore', 'RiskLevel']].describe())
-        """
         print("\nHigh-Risk Entries:")
         print(results[results['RiskLevel'] == 'High Risk'])
